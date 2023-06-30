@@ -1,0 +1,45 @@
+<div class="col-md-5 offset-md-3">
+    <div class="card">
+        <div class="card-body">
+            <form>
+                <h4>Agregar Producto</h4>
+                <div class="card-body">
+                    <label for="nombre">Nombre</label>
+                    <input name="nombre" type="text" [(ngModel)]="producto.nombre" class="form-control " style="background-color: #EFECEC;"   placeholder="nombre"    autofocus>
+                </div>
+                <div class="card-body">
+                    <label for="nombre">Precio</label>
+                    <input name="precio" type="number" [(ngModel)]="producto.precio" class="form-control"  style="background-color: #EFECEC;"   placeholder="precio">
+                </div>
+                <div class="card-body">
+                    <label for="nombre">Cantidad</label>
+                    <input name="cantidad"  type="number" [(ngModel)]="producto.cantidad" class="form-control"  style="background-color: #EFECEC"   placeholder="cantidad">
+                </div>
+                <div class="card-body">
+                    <label for="nombre">Descripcion</label>
+                    <textarea class="form-control" name="descripcion" [(ngModel)]="producto.descripcion" style="background-color: #EFECEC"  placeholder="escribe la descripcion"  cols="30" rows="4">
+                    </textarea>
+                </div>
+               <div class="card-body">
+                    <label for="nombre">Imagen</label>
+                    <input name="imagen" type="url" [(ngModel)]="producto.imagen"  class="form-control" style="background-color: #EFECEC" placeholder="image" >
+                </div>
+                <br>
+                <div class="d-grid gap-2">
+                <button type="button" class="btn btn-success btn-lg" (click)="addProducto()">Agregar</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-4">
+    <div class="card card-body text-center">
+        <img [src]="producto.imagen == ''? '/assets/noimagen.png' : producto.imagen " class="card-img-top" alt="">
+        <h3>{{producto.codigo}}-{{producto.nombre == '' ? 'Nombre del producto': producto.nombre}}</h3>
+        <p><i class="fa-regular fa-dollar-sign fa-sm"></i>{{producto.precio == {} ? ['Precio del producto']: producto.precio}}mnx</p>
+        <p>{{producto.cantidad == 0 ? 'cantidad': producto.cantidad }}</p>
+        <p>{{producto.descripcion == '' ? 'Descripcion del producto': producto.descripcion }}</p>
+        <p>{{producto.fecha | date: 'yyyy-MM-dd HH:mm:ss'}}</p>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+#sub-titulo{
+    letter-spacing: 6px;
+    font-size: 22px;
+     font-weight: bolder;
+  
+  }
+  
+  nav a {
+      display: flex;
+      align-items: center;  
+      justify-content: space-between;
+      padding-right: 3px;  
+  }
+  
+  nav ul li a {
+    align-items: center;  
+    font-size: 22px;
+    letter-spacing: 2px;
+  
+  }
